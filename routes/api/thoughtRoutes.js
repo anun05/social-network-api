@@ -9,8 +9,6 @@ const {
   updateThought,
   addReaction,
   // removeReaction
-
-  // this is where the methods go from the controllers file
 } = require("../../controllers/thoughtController");
 
 //   Routes

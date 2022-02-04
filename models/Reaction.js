@@ -1,25 +1,21 @@
-const { Schema, Types } = require("mongoose");
-const dateFormat = require("../utils/dateFormat");
+const { Schema, Types, model, now } = require("mongoose");
+// const dateFormat = require("../utils/dateFormat");
+const moment = require("moment");
 
 const reactionSchema = new Schema(
   {
     reactionId: {
       type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
+      default: function () {
+        return new Types.ObjectId();
+      },
     },
-    reactionBody: {
-      type: String,
-      required: true,
-      maxlength: 280,
-    },
-    userName: {
-      type: String,
-      required: true,
-    },
+    reactionBody: { type: String, required: true, maxlength: 280 },
+    username: { type: String, required: true },
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (timeStamp) => dateFormat(timeStamp),
+      get: (time) => moment(time).format("MMM DD YYYY [at] hh:mm a"),
     },
   },
   {

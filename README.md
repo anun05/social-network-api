@@ -18,6 +18,6 @@ To install this project you need to download Node.js, MongoDB, Express.js, Mongo
   ## Usage
   
 
-  Demo video link: [Demo Video](./assets/delete.gif)
+  Demo video link: [Delete](./assets/delete.gif)
   
-   [Demo Video](./assets/post,create,get.gif)
+   [Post, create, get](./assets/post,create,get.gif)

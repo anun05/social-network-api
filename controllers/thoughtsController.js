@@ -1,5 +1,5 @@
-const Thought = require("../models/Thought");
-const Reaction = require("../models/Thought");
+const Thought = require("../models/thought");
+const Reaction = require("../models/thought");
 
 module.exports = {
   getThought(req, res) {

@@ -1,8 +1,7 @@
 # social-network-api
 
-##Description
-As a social media startup They want an API for my social network that uses a NoSQL database, so the website can handle large amounts of unstructured data
-
+## Description
+To install this project you need to download Node.js, MongoDB, Express.js, Mongoose, and Moment. After you clone the repo, npm install to download all the packages from the package.json to your computer.
 
   ## Table of Contents
   * [Installation](#installation)
@@ -13,9 +12,10 @@ As a social media startup They want an API for my social network that uses a NoS
   * [Questions](#Questions)
 
   ## Installation
+  npm install after a git clone 
 
 
   ## Usage
   
-  The way to use this project is by running node index.js in the command line. From here, the inquirer package will take the user to the command line where the questions will begin to appear and the user must answer them.
+
   Demo video link: [Demo Video]()

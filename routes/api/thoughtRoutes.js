@@ -1,28 +1,27 @@
 const router = require("express").Router();
 
-// brings in methods from controller file
 const {
-  createThought,
-  getThoughts,
+  getThought,
   getSingleThought,
+  createThought,
   deleteThought,
-  updateThought,
-  addReaction,
-  // removeReaction
-} = require("../../controllers/thoughtController");
+  getReactions,
+  createReactions,
+  deleteReaction,
+} = require("../../controllers/thoughtsController");
 
-//   Routes
+// /api/thoughts
+router.route("/").get(getThought).post(createThought);
 
-router.route("/").get(getThoughts).post(createThought);
+// api/thoughts/
+router.route("/").get(getThought).delete(deleteThought);
 
-router
-  .route("/:thoughtId")
-  .get(getSingleThought)
-  .delete(deleteThought)
-  .put(updateThought);
+// /api/thoughts/:userId
+router.route("/:userThought").get(getSingleThought).delete(deleteThought);
 
-// reaction post method is faulty/ no reaction made
-router.route("/:thoughtId/reactions").post(addReaction);
-// .delete(removeReaction);
+// // api/reactions/
+//   router.route('/').get(getReactions).post(createReactions);
+
+//  router.route('/').get(getReactions).delete(deleteReaction);
 
 module.exports = router;
